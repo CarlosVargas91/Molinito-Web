@@ -98,10 +98,9 @@
       z-index: 1;
     }
     .nav-brand img {
-      height: 46px;
-      width: 46px;
+      height: 70px;
+      width: 70px;
       object-fit: contain;
-      filter: brightness(0) invert(1);
     }
     .nav-wordmark {
       line-height: 1;
@@ -1215,25 +1214,25 @@
       <div class="contact-details">
         <div class="cd-item">
           <div class="cd-label">Phone & WhatsApp</div>
-          <a href="tel:+31600000000" class="cd-value">+31 6 00 000 000</a>
+          <a id="cd-phone" href="tel:+31600000000" class="cd-value">+31 6 00 000 000</a>
         </div>
         <div class="cd-item">
           <div class="cd-label">Email</div>
-          <a href="mailto:hola@elmolinito.nl" class="cd-value">hola@elmolinito.nl</a>
+          <a id="cd-email" href="mailto:hola@elmolinito.nl" class="cd-value">hola@elmolinito.nl</a>
         </div>
         <div class="cd-item">
           <div class="cd-label">Based in</div>
-          <span class="cd-value">Amsterdam, Netherlands</span>
+          <span id="cd-address" class="cd-value">Amsterdam, Netherlands</span>
         </div>
         <div class="cd-item">
           <div class="cd-label">Service area</div>
-          <span class="cd-value">All of the Netherlands</span>
+          <span id="cd-service-area" class="cd-value">All of the Netherlands</span>
         </div>
       </div>
     </div>
     <div class="contact-right">
       <h3>Send us a <em>message</em></h3>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
         <div class="fg-row">
           <div class="fg">
             <label>Name</label>
@@ -1296,17 +1295,17 @@
       <div class="footer-col">
         <h4>Contact</h4>
         <ul>
-          <li><a href="tel:+31600000000">+31 6 00 000 000</a></li>
-          <li><a href="mailto:hola@elmolinito.nl">hola@elmolinito.nl</a></li>
-          <li><a href="#">Amsterdam, NL</a></li>
+          <li><a id="footer-phone" href="tel:+31600000000">+31 6 00 000 000</a></li>
+          <li><a id="footer-email" href="mailto:hola@elmolinito.nl">hola@elmolinito.nl</a></li>
+          <li><a id="footer-address" href="#">Amsterdam, NL</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Follow</h4>
         <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">WhatsApp</a></li>
+          <li><a id="social-instagram" href="#">Instagram</a></li>
+          <li><a id="social-facebook" href="#">Facebook</a></li>
+          <li><a id="social-whatsapp" href="#">WhatsApp</a></li>
         </ul>
       </div>
     </div>
@@ -1369,6 +1368,44 @@
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Load data from JSON
+    fetch('data.json')
+      .then(r => r.json())
+      .then(d => {
+        const { contact: c, social: s, business: b } = d;
+
+        // Contact section
+        const cdPhone = document.getElementById('cd-phone');
+        cdPhone.href = 'tel:' + c.phone;
+        cdPhone.textContent = c.phoneDisplay;
+
+        const cdEmail = document.getElementById('cd-email');
+        cdEmail.href = 'mailto:' + c.email;
+        cdEmail.textContent = c.email;
+
+        document.getElementById('cd-address').textContent = c.address;
+        document.getElementById('cd-service-area').textContent = c.serviceArea;
+
+        // Footer contact
+        const ftPhone = document.getElementById('footer-phone');
+        ftPhone.href = 'tel:' + c.phone;
+        ftPhone.textContent = c.phoneDisplay;
+
+        const ftEmail = document.getElementById('footer-email');
+        ftEmail.href = 'mailto:' + c.email;
+        ftEmail.textContent = c.email;
+
+        document.getElementById('footer-address').textContent = c.addressShort;
+
+        // Footer social
+        document.getElementById('social-instagram').href = s.instagram;
+        document.getElementById('social-facebook').href = s.facebook;
+        document.getElementById('social-whatsapp').href = s.whatsapp;
+
+        // Form action
+        document.getElementById('contact-form').action = b.formAction;
+      });
   </script>
 </body>
 </html>

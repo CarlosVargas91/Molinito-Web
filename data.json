@@ -1,0 +1,21 @@
+{
+  "business": {
+    "name": "El Molinito",
+    "tagline": "Mexican Catering · Netherlands",
+    "description": "Authentic Mexican cuisine for events, celebrations, and every occasion worth remembering.",
+    "formAction": "https://formspree.io/f/YOUR_FORM_ID"
+  },
+  "contact": {
+    "phone": "+310627993504",
+    "phoneDisplay": "+31 6 27 993 504",
+    "email": "elmolinito.nl@gmail.com",
+    "address": "Eindhoven, Netherlands",
+    "addressShort": "Eindhoven, NL",
+    "serviceArea": "All of the Netherlands"
+  },
+  "social": {
+    "instagram": "#",
+    "facebook": "#",
+    "whatsapp": "#"
+  }
+}
