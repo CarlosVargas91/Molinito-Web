@@ -1066,61 +1066,8 @@
       </div>
       <p class="reveal reveal-delay-2">Each dish is rooted in regional Mexican tradition — slow-cooked, hand-made, and finished with the kind of care that turns a meal into a memory.</p>
     </div>
-    <div class="dish-list">
-      <div class="dish-item reveal">
-        <span class="dish-num">01</span>
-        <div class="dish-info">
-          <div class="dish-name">Tacos al Pastor</div>
-          <div class="dish-sub">Marinated pork · pineapple · cilantro · fresh salsa</div>
-        </div>
-        <span class="dish-tag">Street Classic</span>
-        <img class="dish-img" src="https://images.unsplash.com/photo-1561948955-570b270e7c36?w=400&q=80" alt="Tacos" loading="lazy" />
-      </div>
-      <div class="dish-item reveal">
-        <span class="dish-num">02</span>
-        <div class="dish-info">
-          <div class="dish-name">Mole Negro</div>
-          <div class="dish-sub">Oaxacan black mole · slow-braised chicken · sesame</div>
-        </div>
-        <span class="dish-tag">Signature</span>
-        <img class="dish-img" src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80" alt="Mole" loading="lazy" />
-      </div>
-      <div class="dish-item reveal">
-        <span class="dish-num">03</span>
-        <div class="dish-info">
-          <div class="dish-name">Tamales de Rajas</div>
-          <div class="dish-sub">Poblano strips · cheese · corn masa · corn husk</div>
-        </div>
-        <span class="dish-tag">Vegetarian</span>
-        <img class="dish-img" src="https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=400&q=80" alt="Tamales" loading="lazy" />
-      </div>
-      <div class="dish-item reveal">
-        <span class="dish-num">04</span>
-        <div class="dish-info">
-          <div class="dish-name">Enchiladas Verdes</div>
-          <div class="dish-sub">Roasted tomatillo · chicken · crema · queso fresco</div>
-        </div>
-        <span class="dish-tag">Main Course</span>
-        <img class="dish-img" src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80" alt="Enchiladas" loading="lazy" />
-      </div>
-      <div class="dish-item reveal">
-        <span class="dish-num">05</span>
-        <div class="dish-info">
-          <div class="dish-name">Guacamole Fresco</div>
-          <div class="dish-sub">Hand-smashed avocado · serrano · lime · herbs</div>
-        </div>
-        <span class="dish-tag">Starter</span>
-        <img class="dish-img" src="https://images.unsplash.com/photo-1534352956036-cd81e27dd615?w=400&q=80" alt="Guacamole" loading="lazy" />
-      </div>
-      <div class="dish-item reveal">
-        <span class="dish-num">06</span>
-        <div class="dish-info">
-          <div class="dish-name">Churros con Chocolate</div>
-          <div class="dish-sub">Cinnamon sugar · Mexican hot chocolate · cajeta</div>
-        </div>
-        <span class="dish-tag">Dessert</span>
-        <img class="dish-img" src="https://images.unsplash.com/photo-1611299538489-7ad97c02d862?w=400&q=80" alt="Churros" loading="lazy" />
-      </div>
+    <div class="dish-list" id="dish-list">
+      <!-- Dishes are loaded from data.json -->
     </div>
   </section>
 
@@ -1373,7 +1320,25 @@
     fetch('data.json')
       .then(r => r.json())
       .then(d => {
-        const { contact: c, social: s, business: b } = d;
+        const { contact: c, social: s, business: b, menu: m } = d;
+
+        // Render menu dishes
+        if (m && m.length) {
+          const list = document.getElementById('dish-list');
+          list.innerHTML = m.map((dish, i) => `
+            <div class="dish-item reveal">
+              <span class="dish-num">${String(i + 1).padStart(2, '0')}</span>
+              <div class="dish-info">
+                <div class="dish-name">${dish.name}</div>
+                <div class="dish-sub">${dish.ingredients}</div>
+              </div>
+              <span class="dish-tag">${dish.tag}</span>
+              <img class="dish-img" src="${dish.image}" alt="${dish.name}" loading="lazy" />
+            </div>
+          `).join('');
+          // Re-observe newly created reveal elements
+          list.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        }
 
         // Contact section
         const cdPhone = document.getElementById('cd-phone');
