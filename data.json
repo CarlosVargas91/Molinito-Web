@@ -1,0 +1,36 @@
+{
+  "business": {
+    "name": "El Molinito",
+    "tagline": "Mexican Catering · Netherlands",
+    "description": "Authentic Mexican cuisine for events, celebrations, and every occasion worth remembering."
+  },
+  "contact": {
+    "phone": "+310627993504",
+    "phoneDisplay": "+31 6 27 993 504",
+    "email": "elmolinito.nl@gmail.com",
+    "address": "Eindhoven, Netherlands",
+    "addressShort": "Eindhoven, NL",
+    "serviceArea": "All of the Netherlands"
+  },
+  "social": {
+    "instagram": "#",
+    "facebook": "#",
+    "whatsapp": "#"
+  },
+  "menu": [
+    {
+      "name": "Enchiladas",
+      "ingredients": "Corn tortillas · roasted tomatillo salsa · chicken · crema · queso fresco",
+      "price": "€12",
+      "tag": "Main Course",
+      "image": "images/food/Enchialadas.png"
+    },
+    {
+      "name": "Pulpo con Pez",
+      "ingredients": "Grilled octopus · fresh fish · citrus marinade · herbs · salsa verde",
+      "price": "€18",
+      "tag": "Signature",
+      "image": "images/food/Pulpo-Pez.jpeg"
+    }
+  ]
+}
