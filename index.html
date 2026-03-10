@@ -464,7 +464,7 @@
 
     .dish-item {
       display: grid;
-      grid-template-columns: 48px 1fr auto 220px;
+      grid-template-columns: 48px 1fr auto auto 220px;
       gap: 28px;
       align-items: center;
       padding: 28px 0;
@@ -516,6 +516,15 @@
       border: 1px solid rgba(196,98,45,0.25);
       padding: 5px 12px;
       border-radius: 20px;
+      white-space: nowrap;
+      align-self: center;
+    }
+
+    .dish-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--rust);
       white-space: nowrap;
       align-self: center;
     }
@@ -928,7 +937,7 @@
       .about-text-block { padding: 60px 40px; }
       #menu { padding: 80px 28px; }
       .menu-header { grid-template-columns: 1fr; gap: 20px; }
-      .dish-item { grid-template-columns: 36px 1fr; }
+      .dish-item { grid-template-columns: 36px 1fr auto; }
       .dish-img, .dish-tag { display: none; }
       #pricing { padding: 80px 28px; }
       .packages { grid-template-columns: 1fr; }
@@ -1002,7 +1011,7 @@
       <span class="ticker-item"><b>Tacos</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Tamales</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Enchiladas</b> <span class="ticker-star">✦</span></span>
-      <span class="ticker-item"><b>Mole Negro</b> <span class="ticker-star">✦</span></span>
+      <span class="ticker-item"><b>Bunuelos</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Guacamole</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Pozole</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Churros</b> <span class="ticker-star">✦</span></span>
@@ -1010,7 +1019,7 @@
       <span class="ticker-item"><b>Tacos</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Tamales</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Enchiladas</b> <span class="ticker-star">✦</span></span>
-      <span class="ticker-item"><b>Mole Negro</b> <span class="ticker-star">✦</span></span>
+      <span class="ticker-item"><b>Bunuelos</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Guacamole</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Pozole</b> <span class="ticker-star">✦</span></span>
       <span class="ticker-item"><b>Churros</b> <span class="ticker-star">✦</span></span>
@@ -1025,7 +1034,7 @@
       <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?w=900&q=80" alt="Chef preparing food" loading="lazy" />
       <div class="about-visual-overlay"></div>
       <div class="about-pill">
-        <div class="about-pill-num">10+</div>
+        <div class="about-pill-num">2+</div>
         <div class="about-pill-label">Years of<br>tradition</div>
       </div>
     </div>
@@ -1042,7 +1051,7 @@
       </div>
       <div class="about-stats reveal reveal-delay-3">
         <div>
-          <div class="about-stat-num">500+</div>
+          <div class="about-stat-num">50+</div>
           <div class="about-stat-label">Events Catered</div>
         </div>
         <div>
@@ -1333,6 +1342,7 @@
                 <div class="dish-sub">${dish.ingredients}</div>
               </div>
               <span class="dish-tag">${dish.tag}</span>
+              <span class="dish-price">${dish.price}</span>
               <img class="dish-img" src="${dish.image}" alt="${dish.name}" loading="lazy" />
             </div>
           `).join('');
