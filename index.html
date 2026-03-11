@@ -1056,7 +1056,7 @@
         </div>
         <div>
           <div class="about-stat-num">20+</div>
-          <div class="about-stat-label">Signature Dishes</div>
+          <div class="about-stat-label">Main Course Dishes</div>
         </div>
         <div>
           <div class="about-stat-num">100%</div>
@@ -1258,6 +1258,7 @@
           <li><a id="footer-phone" href="tel:+31600000000">+31 6 00 000 000</a></li>
           <li><a id="footer-email" href="mailto:hola@elmolinito.nl">hola@elmolinito.nl</a></li>
           <li><a id="footer-address" href="#">Amsterdam, NL</a></li>
+          <li><span style="opacity:0.6;">KvK: </span><span id="footer-kvk">—</span></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -1377,6 +1378,7 @@
         ftEmail.textContent = c.email;
 
         document.getElementById('footer-address').textContent = c.addressShort;
+        document.getElementById('footer-kvk').textContent = c['KvK number'];
 
         // Footer social
         document.getElementById('social-instagram').href = s.instagram;
