@@ -1184,6 +1184,10 @@
           <div class="cd-label">Service area</div>
           <span id="cd-service-area" class="cd-value">All of the Netherlands</span>
         </div>
+        <div class="cd-item">
+          <div class="cd-label">KvK number</div>
+          <span id="cd-kvk" class="cd-value">—</span>
+        </div>
       </div>
     </div>
     <div class="contact-right">
@@ -1360,6 +1364,7 @@
         cdEmail.textContent = c.email;
 
         document.getElementById('cd-address').textContent = c.address;
+        document.getElementById('cd-kvk').textContent = c['KvK number'];
         document.getElementById('cd-service-area').textContent = c.serviceArea;
 
         // Footer contact
@@ -1375,7 +1380,6 @@
 
         // Footer social
         document.getElementById('social-instagram').href = s.instagram;
-        document.getElementById('social-facebook').href = s.facebook;
         document.getElementById('social-whatsapp').href = s.whatsapp;
 
         // Form action is set directly in the HTML
