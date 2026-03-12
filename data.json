@@ -40,14 +40,14 @@
       "image": "images/food/Agua-Chile.jpeg"
     },
     {
-      "name": "Ceviche de Atun Fresco",
+      "name": "Ceviche de Atún Fresco",
       "ingredients": "Fresh tuna · cucumber · red onion · cilantro · lime juice · soy sauce · mango (optional) · chiles",
       "price": "€18",
       "tag": "Main Course",
       "image": "images/food/Atun.jpeg"
     },
     {
-      "name": "Tacos de Camaron o Pescado Baja Style",
+      "name": "Tacos de Camarón o Pescado Baja Style",
       "ingredients": "Fried shrimp or fish · cabbage slaw · creamy chipotle sauce · corn tortillas",
       "price": "€18",
       "tag": "Main Course",
@@ -61,7 +61,7 @@
       "image": "images/food/Ahogada.jpeg"
     },
     {
-      "name": "Lonche Banado",
+      "name": "Lonche Bañado",
       "ingredients": "Shredded pork leg · birote bread · creamy tomato and dried chiles sauce · pickled onions",
       "price": "€18",
       "tag": "Main Course",
@@ -159,10 +159,10 @@
       "image": "images/food/Zarandeado.jpeg"
     },
     {
-      "name": "Bunuelos",
+      "name": "Buñuelos",
       "ingredients": "Fried dough · cinnamon sugar",
       "price": "€18",
-      "tag": "Desert",
+      "tag": "Dessert",
       "image": "images/food/Bunuelo.jpeg"
     }
   ]
