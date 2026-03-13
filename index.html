@@ -996,12 +996,11 @@
       #about { grid-template-columns: 1fr; }
       .about-visual { height: 50vh; }
       .about-text-block { padding: 60px 40px; }
-      #menu { padding: 80px 28px; }
+      #order { padding: 80px 28px; }
       .menu-header { grid-template-columns: 1fr; gap: 20px; }
-      .dish-item { grid-template-columns: 36px 1fr auto auto 90px; }
+      .dish-item { grid-template-columns: 36px 1fr auto auto 90px; gap: 12px; }
       .dish-img { width: 100%; height: 70px; }
       .dish-tag { display: none; }
-      #pricing { padding: 80px 28px; }
       .packages { grid-template-columns: 1fr; }
       #gallery { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
       .mosaic-item.tall { grid-row: span 1; }
@@ -1432,11 +1431,10 @@
 
         // Render menu dishes
         if (m && m.length) {
-          const waPhone = c.phone.replace(/\D/g, '');
           const list = document.getElementById('dish-list');
           list.innerHTML = m.map((dish, i) => {
             const waText = encodeURIComponent(`Hi! I'd like to order: ${dish.name} (${dish.price})`);
-            const waUrl = `https://wa.me/${waPhone}?text=${waText}`;
+            const waUrl = `${s.whatsapp}?text=${waText}`;
             return `
             <div class="dish-item reveal">
               <span class="dish-num">${String(i + 1).padStart(2, '0')}</span>
