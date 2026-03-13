@@ -42,7 +42,7 @@
       pointer-events: none;
       z-index: 10000;
       transform: translate(-50%, -50%);
-      transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s;
+      transition: transform 0.1s, width 0.2s, height 0.2s, background 0.2s, opacity 0.2s;
       mix-blend-mode: screen;
     }
     .cursor-ring {
@@ -1280,10 +1280,26 @@
     const ring = document.getElementById('cursorRing');
     let mx = 0, my = 0, rx = 0, ry = 0;
 
+    let idleTimer;
+    function showCursor() {
+      cursor.style.opacity = '';
+      ring.style.opacity = '';
+    }
+    function hideCursor() {
+      cursor.style.opacity = '0';
+      ring.style.opacity = '0';
+    }
+    function resetIdleTimer() {
+      showCursor();
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(hideCursor, 5000);
+    }
+
     document.addEventListener('mousemove', e => {
       mx = e.clientX; my = e.clientY;
       cursor.style.left = mx + 'px';
       cursor.style.top = my + 'px';
+      resetIdleTimer();
     });
 
     // Ring follows with slight lag
