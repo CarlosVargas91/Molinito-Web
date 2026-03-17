@@ -21,148 +21,148 @@
     {
       "name": "Enchiladas Suizas",
       "ingredients": "Corn tortillas · roasted tomatillo salsa · chicken · cream · fresh cheese · cilantro",
-      "price": "€12",
-      "tag": "Main Course",
+      "price": "€8",
+      "tag": "Main Course. Order of 4",
       "image": "images/food/Enchiladas.png"
     },
     {
       "name": "Octopus and fish zarandeados",
       "ingredients": "Grilled octopus · fresh fish · citrus marinade · herbs · salsa verde",
       "price": "€18",
-      "tag": "Main Course",
+      "tag": "Main Course. 500 gr",
       "image": "images/food/Pulpo.jpeg"
     },
     {
       "name": "Aguachile de Camarón",
       "ingredients": "Fresh shrimps · cucumber · red onion · cilantro · lime juice · chiles",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€10",
+      "tag": "Main Course. 500gr",
       "image": "images/food/Agua-Chile.jpeg"
     },
     {
       "name": "Ceviche de Atún Fresco",
       "ingredients": "Fresh tuna · cucumber · red onion · cilantro · lime juice · soy sauce · mango (optional) · chiles",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€11",
+      "tag": "Main Course. 500 gr",
       "image": "images/food/Atun.jpeg"
     },
     {
       "name": "Tacos de Camarón o Pescado Baja Style",
       "ingredients": "Fried shrimp or fish · cabbage slaw · creamy chipotle sauce · corn tortillas",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€10",
+      "tag": "Main Course. Order of 4",
       "image": "images/food/Pescado-Baja.jpeg"
     },
     {
       "name": "Torta Ahogada",
       "ingredients": "Pork carnitas · birote bread · tomato sauce · pickled onions · refried beans",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€8",
+      "tag": "Main Course.",
       "image": "images/food/Ahogada.jpeg"
     },
     {
       "name": "Lonche Bañado",
       "ingredients": "Shredded pork leg · birote bread · creamy tomato and dried chiles sauce · pickled onions",
-      "price": "€18",
+      "price": "€8",
       "tag": "Main Course",
       "image": "images/food/Lonche-Banado.jpeg"
     },
     {
       "name": "Lonche de Pierna",
       "ingredients": "Shredded pork leg cooked in tomato sauce · birote bread · sliced tomato and avocado · pickled onions",
-      "price": "€18",
+      "price": "€7",
       "tag": "Main Course",
       "image": "images/food/Lonche.jpeg"
     },
     {
-      "name": "Barbacoa",
+      "name": "Tacos Barbacoa",
       "ingredients": "Meat slow-cooked · seasoned with dried chilies and spices · served with corn tortillas and salsa",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€9",
+      "tag": "Main Course. Order of 4",
       "image": "images/food/Barbacoa.jpeg"
     },
     {
       "name": "Birria",
       "ingredients": "Meat slow-cooked · seasoned with dried chilies and spices · served with corn tortillas and salsa",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€9",
+      "tag": "Main Course. 500 gr",
       "image": "images/food/Birria.jpeg"
     },
     {
       "name": "Carne en su jugo",
       "ingredients": "Meat slow-cooked · bacon · beans · onions · cilantro · lime juice · served with corn tortillas",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€8",
+      "tag": "Main Course. 500 gr",
       "image": "images/food/Carne-Jugo.jpeg"
     },
     {
       "name": "Chamorro",
       "ingredients": "Pork shank slow-cooked · seasoned with dried chilies and spices · served with corn tortillas and salsa",
-      "price": "€18",
+      "price": "€8",
       "tag": "Main Course",
       "image": "images/food/Chamorro.jpeg"
     },
     {
       "name": "Chilaquiles Red or Green",
       "ingredients": "Corn tortilla chips · red or green salsa · chicken or eggs (optional) · cream · fresh cheese · cilantro",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€8",
+      "tag": "Main Course. 500 gr",
       "image": "images/food/Chilaquiles.jpeg"
     },
     {
       "name": "Tacos Cochinita Pibil",
       "ingredients": "Pork slow-cooked · marinated in achiote and citrus juice · served with corn tortillas and pickled onions",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€9",
+      "tag": "Main Course. Order of 4",
       "image": "images/food/Cochinita.jpeg"
     },
     {
       "name": "Huarache Cochinita Pibil",
       "ingredients": "Pork slow-cooked · marinated in achiote and citrus juice · served on a thick corn masa base with refried beans, pickled onions, and salsa",
-      "price": "€18",
+      "price": "€7",
       "tag": "Main Course",
       "image": "images/food/Huarache.jpeg"
     },
     {
       "name": "Enmoladas",
       "ingredients": "Corn tortillas · mole sauce · chicken · fresh cheese · sesame seeds",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€8",
+      "tag": "Main Course. Order of 4",
       "image": "images/food/Enmoladas.jpeg"
     },
     {
       "name": "Tacos",
       "ingredients": "Pastor - Carnitas - Asada - Chorizo - Lengua - Suadero · served with corn tortillas and salsa",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€8",
+      "tag": "Main Course. Order of 4",
       "image": "images/food/Tacos.jpeg"
     },
     {
       "name": "Tacos Vapor",
       "ingredients": "Potato - Beans - Shredded beef",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€8",
+      "tag": "Main Course. Order of 4",
       "image": "images/food/Vapor.jpeg"
     },
     {
       "name": "Tamales",
       "ingredients": "Corn masa · filled with pork( red or green sauce) or chicken (green sauce) · wrapped in corn/banana leaves and steamed",
-      "price": "€18",
+      "price": "€3",
       "tag": "Main Course",
       "image": "images/food/Tamales.jpeg"
     },
     {
       "name": "Shrimp Zarandeados",
       "ingredients": "Shrimp · seasoned with dried chilies and spices · served with corn tortillas and salsa",
-      "price": "€18",
-      "tag": "Main Course",
+      "price": "€13",
+      "tag": "Main Course. 500 gr",
       "image": "images/food/Zarandeado.jpeg"
     },
     {
       "name": "Buñuelos",
       "ingredients": "Fried dough · cinnamon sugar",
-      "price": "€18",
-      "tag": "Dessert",
+      "price": "€4",
+      "tag": "Dessert. Order of 4",
       "image": "images/food/Bunuelo.jpeg"
     }
   ]
