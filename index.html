@@ -605,6 +605,58 @@
       filter: saturate(1.15);
     }
     .dish-item:hover .dish-img { transform: scale(1.04); }
+    .dish-img { cursor: zoom-in; }
+
+    /* ─── LIGHTBOX ─── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(17,14,10,0.92);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+      filter: saturate(1.15);
+      animation: lbIn 0.2s ease;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: none;
+      border: none;
+      color: var(--warm-white);
+      font-size: 32px;
+      cursor: pointer;
+      opacity: 0.6;
+      line-height: 1;
+      transition: opacity 0.2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+    .lightbox-caption {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--warm-white);
+      opacity: 0.8;
+      white-space: nowrap;
+    }
+    @keyframes lbIn {
+      from { opacity: 0; transform: scale(0.94); }
+      to   { opacity: 1; transform: scale(1); }
+    }
 
     /* ─── PRICING (packages panel inside #order) ─── */
     #tab-packages { padding-top: 20px; }
@@ -1024,6 +1076,13 @@
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&#x2715;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+  </div>
+
   <!-- ─── NAV ─── -->
   <nav>
     <a href="#" class="nav-brand">
@@ -1228,7 +1287,7 @@
       <a href="#contact">Book El Molinito →</a>
     </div>
     <div class="mosaic-item">
-      <img src="images/decorators/photo-1565299585323-38d6b0865b47.jpeg" alt="Dishes" loading="lazy" />
+      <img src="images/decorators/taquiza.jpeg" alt="Dishes" loading="lazy" />
     </div>
   </div>
 
@@ -1418,6 +1477,27 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+    // Lightbox
+    const lightbox     = document.getElementById('lightbox');
+    const lightboxImg  = document.getElementById('lightbox-img');
+    const lightboxCap  = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt;
+      lightboxCap.textContent = alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
     // Tab switching
     document.querySelectorAll('.tab-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1458,6 +1538,10 @@
           }).join('');
           // Re-observe newly created reveal elements
           list.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+          // Lightbox on dish image click
+          list.querySelectorAll('.dish-img').forEach(img => {
+            img.addEventListener('click', () => openLightbox(img.src, img.alt));
+          });
         }
 
         // Contact section
