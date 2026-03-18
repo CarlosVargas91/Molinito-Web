@@ -26,7 +26,7 @@
       "image": "images/food/Enchiladas.png"
     },
     {
-      "name": "Octopus and fish zarandeados",
+      "name": "Pulpo y pescado zarandeados",
       "ingredients": "Grilled octopus · fresh fish · citrus marinade · herbs · salsa verde",
       "price": "€18",
       "tag": "Main Course. 500 gr",
@@ -47,7 +47,7 @@
       "image": "images/food/Atun.jpeg"
     },
     {
-      "name": "Tacos de Camarón o Pescado Baja Style",
+      "name": "Tacos de Camarón o Pescado Estilo Baja",
       "ingredients": "Fried shrimp or fish · cabbage slaw · creamy chipotle sauce · corn tortillas",
       "price": "€10",
       "tag": "Main Course. Order of 4",
@@ -75,7 +75,7 @@
       "image": "images/food/Lonche.jpeg"
     },
     {
-      "name": "Tacos Barbacoa",
+      "name": "Tacos de Barbacoa",
       "ingredients": "Meat slow-cooked · seasoned with dried chilies and spices · served with corn tortillas and salsa",
       "price": "€9",
       "tag": "Main Course. Order of 4",
@@ -103,7 +103,7 @@
       "image": "images/food/Chamorro.jpeg"
     },
     {
-      "name": "Chilaquiles Red or Green",
+      "name": "Chilaquiles Rojos o Verdes",
       "ingredients": "Corn tortilla chips · red or green salsa · chicken or eggs (optional) · cream · fresh cheese · cilantro",
       "price": "€8",
       "tag": "Main Course. 500 gr",
@@ -152,7 +152,7 @@
       "image": "images/food/Tamales.jpeg"
     },
     {
-      "name": "Shrimp Zarandeados",
+      "name": "Camarones Zarandeados",
       "ingredients": "Shrimp · seasoned with dried chilies and spices · served with corn tortillas and salsa",
       "price": "€13",
       "tag": "Main Course. 500 gr",
